@@ -15,7 +15,7 @@ export default function GameCanvas({ canvasRef, canvasWidth, canvasHeight, playe
       const img = images[player.state] || images.normal;
       ctx.drawImage(img, player.x, player.y, player.width, player.height);
 
-      ctx.font = `${20 * scale}px 'Press Start 2P'`;
+      ctx.font = `${28 * scale}px 'Press Start 2P'`;
       ctx.textAlign = "center";
       words.forEach((word) => {
         ctx.fillStyle = word.type === "good" ? "lime" : "red";
