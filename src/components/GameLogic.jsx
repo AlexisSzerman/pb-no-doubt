@@ -30,13 +30,13 @@ export default function GameLogic({ score, setScore, level, setLevel }) {
   const scale = canvasSize.width / 800;
 
   useEffect(() => {
-    setPlayer((p) => ({
-      ...p,
-      width: 220 * scale,
-      height: 220 * scale,
-      y: canvasSize.height - 220 * scale,
-    }));
-  }, [canvasSize, scale, setPlayer]);
+   setPlayer((p) => ({
+  ...p,
+  width: 220 * scale,
+  height: 220 * scale,
+  y: canvasSize.height - 220 * scale - 24, // ← margen extra
+}));
+  }, [scale, canvasSize.height, setPlayer]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
